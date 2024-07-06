@@ -1,0 +1,128 @@
+:root {
+    --cinza-principal: #f2f2f2;
+    --roxo: #552482;
+    --laranja: #d2a118bf;
+    --roxo-hoover: #745d7a75;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cinza-principal);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--roxo);
+    color: white;
+    padding: 10px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.header .title {
+    margin: 0;
+    font-size: 1.2rem; 
+}
+
+.user-info {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; 
+    max-width: 800px; 
+}
+
+.user-info h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.books-section {
+    background-color: var(--cinza-principal);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.book-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.book-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-item h3 {
+    margin-top: 0;
+    color: var(--roxo);
+}
+
+.footer {
+    background-color: var(--roxo);
+    color: white;
+    padding: 5px; 
+    text-align: center;
+    margin-top: auto; 
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.footer-nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-nav ul li a:hover {
+    text-decoration: none; 
+}
+
+
+.add-book-link {
+    background-color: var(--roxo); 
+    color: white; 
+    padding: 8px 16px;
+    border-radius: 5px; 
+    text-decoration: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.add{
+    margin-top: 40px;
+}
+
+.add-book-link:hover {
+    background-color: var(--roxo-hoover); 
+}
+
+@media screen and (max-width: 768px) {
+    .header .title {
+        font-size: 1.1rem; 
+    }
+
+    .user-info {
+        padding: 15px;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+}

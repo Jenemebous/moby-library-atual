@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sua Biblioteca Pessoal">
+    <title>Moby - Sua Biblioteca Pessoal</title>
+    <link rel="shortcut icon" href="/img/img-web.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav id="top" ;>
+
+            <a href="#" class=welcome>
+                <span><span class="user-name">Bem-vindo, <strong>
+                            <%= nom_usuario %>
+                        </strong></span></span>
+            </a>
+
+        </nav>
+        <nav id="mid">
+            <img src="/img/logo-header.png" alt="">
+            <div class="dropdown" style="margin-left: 10px;">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    IR PARA A BIBLIOTECA
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="./adicionar">Comece por aqui!</a></li>
+                    <li><a class="dropdown-item" href="./perfil">Perfil</a></li>
+                </ul>
+            </div>
+
+        </nav>
+        <nav id="bottom">
+            <h3 style="margin-top: 10px; align-items: center;">DÊ VIDA A SUA BIBLIOTECA PESSOAL!
+
+            </h3>
+
+
+        </nav>
+
+
+
+
+    </header>
+
+
+    <main>
+
+        <div class="container" style="margin-top: 60px; margin-bottom: 60px;">
+
+            <div id="carouselAutores" class="carousel carousel-dark slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselAutores" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselAutores" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselAutores" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselAutores" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner" style="height: 15em;">
+                    <div class="carousel-item h-100 active"
+                        style="background: url(/img/Frame-0.png) center/contain no-repeat;">
+                    </div>
+                    <div class="carousel-item h-100"
+                        style="background: url(/img/Frame-1.png) center/contain no-repeat;">
+                    </div>
+                    <div class="carousel-item h-100"
+                        style="background: url(/img/Frame-2.png) center/contain no-repeat;">
+                    </div>
+                    <div class="carousel-item h-100"
+                        style="background: url(/img/Frame-3.png) center/contain no-repeat;">
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselAutores"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselAutores"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        </section>
+        <section id="books">
+            <div class="title">
+                <hr>
+                <hr>
+                <img src="/img/logo-web.png" alt="" srcset="">
+                <h1>Recomendação de Livros</h1>
+            </div>
+            <div class="grade">
+                <div class="card-group">
+                    <div class="card">
+                        <img class="card-img-top" src="/img/azkaban.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">HARRY POTTER E O PRISIONEIRO DE AZKABAN</h5>
+                            <p class="card-text"><strong>É o início do terceiro ano na escola de bruxaria Hogwarts.
+                                    Harry, Ron e Hermione têm muito o que aprender. Mas uma ameaça ronda a escola e ela
+                                    se chama Sirius Black. Após doze anos encarcerado na prisão de Azkaban, ele consegue
+                                    escapar e volta para vingar seu mestre, Lord Voldemort.</strong>
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="/img/cegueira.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">ENSAIO SOBRE A CEGUEIRA</h5>
+                            <p class="card-text"><strong>Ensaio sobre a Cegueira é um romance do escritor português José
+                                    Saramago, publicado em 1995, e traduzido para diversas línguas. A obra narra a
+                                    história da epidemia de cegueira branca que se espalha por uma cidade, causando um
+                                    grande colapso na vida das pessoas e abalando as estruturas sociais. </strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="grade">
+                <div class="card-group">
+                    <div class="card">
+                        <img class="card-img-top" src="/img/cemanos.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">CEM ANOS DE SOLIDÃO</h5>
+                            <p class="card-text"><strong>Cem Anos de Solidão é uma obra do escritor colombiano Gabriel
+                                    García Márquez, Prêmio Nobel da Literatura em 1982, e é atualmente considerada uma
+                                    das obras mais importantes da literatura latino-americana. Essa obra tem a
+                                    peculiaridade de ser umas das mais lidas e traduzidas de todo o mundo. </strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="/img/george.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">1984</h5>
+                            <p class="card-text"><strong>1984 mostra uma futura realidade distópica ocorrida no ano de
+                                    1984. Nessa realidade, a Inglaterra é comandada por um regime totalitarista em que
+                                    todos são vigiados pelo Grande Irmão. Winston Smith, protagonista da narrativa,
+                                    questiona o poder vigente. O romance, publicado em 1949, está associado ao
+                                    modernismo inglês.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="grade">
+                <div class="card-group">
+                    <div class="card">
+                        <img class="card-img-top" src="/img/jujutsu.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">JUJUTSU KAISEN</h5>
+                            <p class="card-text"><strong>Itadori Yuuji, um estudante do colegial com uma capacidade
+                                    física única, tem como rotina visitar seu avô que está hospitalizado. Porém, um dia,
+                                    o selo de um "objeto amaldiçoado" escondido em sua escola é rompido, fazendo surgir
+                                    criaturas assustadoras. Para salvar seus colegas ele parte em direção ao colégio,
+                                    quando algo inesperado acontece...!</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="/img/oapanhador.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">O APANHADOR NO CAMPO DE CENTEIO</h5>
+                            <p class="card-text"><strong>O Apanhador no Campo de Centeio narra a busca do narrador
+                                    Holden Caulfield por seu lugar no mundo, visto que ele se encontra em um espaço
+                                    intermediário entre abandonar e permanecer em meio às instituições que o criaram
+                                    (família, escola, amigos).</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="grade">
+                <div class="card-group">
+                    <div class="card">
+                        <img class="card-img-top" src="/img/op.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">ONE PIECE</h5>
+                            <p class="card-text"><strong>One Piece é uma série de mangá escrita e ilustrada por Eiichiro
+                                    Oda. Os capítulos têm sido serializados na revista Weekly Shōnen Jump desde julho de
+                                    1997, com os capítulos compilados e publicados em 108 volumes tankōbon pela editora
+                                    Shueisha até abril de 2024. One Piece conta as aventuras de Monkey D.</strong></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="/img/zelda.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">THE LEGEND OF ZELDA</h5>
+                            <p class="card-text"><strong>Link é um jovem da floresta que vê seu lar em perigo e parte em
+                                    uma jornada para deter um rei maligno e salvar o reino de Hyrule! Para completar sua
+                                    missão, ele terá que encontrar a princesa Zelda e ajudar outros povos para reunir a
+                                    Triforce e restabelecer o equilíbrio do mundo!</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </section>
+    </main>
+
+
+    <footer style="margin-top: 20px">
+        <span style="color: white;">©Copyright 2024 Moby. All rights reserved</span>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

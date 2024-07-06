@@ -1,0 +1,128 @@
+:root {
+    --cinza-principal: #D9D6D6;
+    --roxo: #d2a118bf;
+    --laranja: #552482;
+    --laranja-hover: #745d7a75;
+}
+
+@media (min-width: 768px) {
+    header #mid img {
+        width: 30%;
+    }
+}
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+    header #mid img {
+        width: 50%;
+    }
+}
+
+/* Para telas menores que 576px */
+@media (max-width: 576px) {
+    header #mid img {
+        width: 70%;
+    }
+    header #top .welcome {
+        font-size: 1em;
+    }
+}
+
+/* Para telas menores que 400px */
+@media (max-width: 400px) {
+    header #top .welcome {
+        font-size: 0.8em;
+    }
+    #books .title h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Ajustes gerais */
+@media (max-width: 992px) {
+    #books .grade {
+        padding: 1% 5%;
+    }
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: url('../img/clarice-login-2.png') no-repeat center center fixed;
+    background-size: cover; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.background {
+    width: 100%;
+    padding: 0 6rem; 
+}
+
+.register-container {
+    background-color: var(--roxo);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%; 
+    max-width: 350px; 
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.title {
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.label {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-align: left;
+}
+
+.input-field {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box; 
+    outline: none;
+}
+
+.btn-register {
+    margin-top: 1.5rem;
+    background-color: var(--laranja);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn-register:hover {
+    background-color: var(--laranja-hover);
+}
+
+@media screen and (min-width: 768px) {
+    .register-container {
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+
+.no-underline a {
+    text-decoration: none; 
+}
+

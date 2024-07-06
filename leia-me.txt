@@ -1,0 +1,66 @@
+Elaborado e concluído por Ana Gabriely Oliveira dos Santos.
+
+Inicialmente, enfrentei algumas complicações, especialmente no que diz respeito ao desenvolvimento do backend. Como medida inicial, concentrei meus esforços na elaboração do banco de dados e no frontend, que já estavam em andamento. Posteriormente, ao abordar o backend, encontrei dificuldades significativas, e nas primeiras (estimativa) 20 horas, não obtive progresso. Apesar de ter explorado diversos recursos tanto no youtube, quanto páginas web e chatgpt, ainda assim encontrei dificuldades em encontrar orientações claras sobre a implementação utilizando o padrão DAO.
+
+Decidi, então, iniciar a implementação em PHP, o que  trouxe algum êxito, porém, foi apenas uma solução temporária. Ao longo desse período, enfrentei momentos de desânimo e indecisão, até que tive a ideia de desenvolver os códigos apenas em JavaScript (consultando outros projetos que já elaborei ao decorrer do curso), e posteriormente abordar a implementação do backend. Seguindo essa abordagem, continuei a explorar recursos online e estudei como faria com o auxílio do ChatGPT, até encontrar a solução adequada. Assim, desenvolvi o primeiro método, "Adicionar", e os demais métodos se seguiram, uma vez que eu havia superado o principal obstáculo: dar início ao projeto.
+
+Após concluir a implementação dos DAOs com base no que imaginei fazer, iniciei a criação do arquivo server.js. Meu objetivo era separar o código em diferentes arquivos, porém, devido às complexidades encontradas, optei por manter tudo em um único arquivo, o server.js. Um dos aspectos que mais me causou confusão e dificuldade foi a organização dos arquivos em pastas, pois desde o início eu estava tentando seguir o padrão MVC, o que se revelou prematuro, considerando meu ainda limitado entendimento do que estava fazendo. Decidi, então, temporariamente, deixar de lado a estrutura MVC e prosseguir com a implementação no mesmo arquivo, posteriormente realizando a separação.
+
+Ao perceber que estava progredindo no projeto, me senti satisfeita, embora reconheça que não desejo passar novamente por esse tipo de desafio no futuro, dada a sua natureza exigente e o esforço mental requerido, tive episódios de ansiedade e de insônia recorrentes. Apesar das dificuldades, apreciei o processo de desenvolvimento, tanto na escrita do código quanto na elaboração do design do frontend (a melhor e mais satisfatória parte). Reconheço que há margem (muita) para melhorias, porém, sinto-me realizada por ter concluído este projeto (pude acrescenter mais conhecimento ao pouco que tenho, se não fosse por todo conteúdo disponibilizado eu não conseguiria).
+
+Quanto à utilização do mysql2 para conectar ao banco de dados, essa parte fora relativamente simples, sem maiores contratempos.
+
+No momento que escrevo, reconheço que não consegui implementar a tag dialog conforme inicialmente planejado, resultando na exibição de mensagens de erro e avisos em uma nova página HTML.
+
+(Isso foi resolvido hoje, no dia 02/07, com auxílio de meu amigo e colega de sala Pedro Cleyvid, com maior uso do ejs)
+Quanto a possíveis problemas ou erros identificados, não percebo nenhum com base no meu conhecimento atual.
+
+Descrição da experiência e das dificuldades encontradas: Generalizando, enfrentei uma série de desafios, incluindo questões relacionadas aos DAOs, ao backend e à implementação da tag dialog. No início, minha principal dificuldade residia na lógica de registro e login, que consegui superar com o auxílio de tutoriais online e um código previamente desenvolvido. Posteriormente, enfrentei dificuldades para conectar os usuários aos livros e para exibir apenas os livros cadastrados pelo usuário na função de visualização, entre outras questões que prefiro discutir pessoalmente.
+
+Referências:
+
+Youtube:
+
+Curso NODEjs Edson Maia: https://www.youtube.com/watch?v=05WeJCU8CJ4&list=PLnex8IkmReXwCyR-cGkyy8tCVAW7fGZow
+
+Backend com NodeJs e Javascript DO ZERO - Para iniciantes | Mão na massa - 005: https://www.youtube.com/watch?v=YeEX1s4M9xg&t=61s
+
+Minicurso de NodeJS - Todaas as aulas - Crie um Backend com JavaScript: https://www.youtube.com/watch?v=OgXHKNjt1DU
+
+SISTEMA DE LOGIN COM NODE JS | TUTORIAL DE JAVASCRIPT: https://www.youtube.com/watch?v=rXWa9jtHu7g&t=56s
+
+Autenticação com Node.js e MongoDB com JWT - Login e Registro com Node.js: https://www.youtube.com/watch?v=qEBoZ8lJR3k&t=2043s
+
+Como criar TOKEN e ROTA AUTENTICADA no NODE.JS usando o JWT: https://www.youtube.com/watch?v=zwWa9KKt4UY
+
+COMO UTILIZAR O HTML NO NODEJS UTILIZANDO O EJS: https://www.youtube.com/watch?v=N39MvT0kdvw&t=68s
+
+Autenticação JSON Web Token (JWT) em Node.js: https://www.youtube.com/watch?v=D0gpL8-DVrc
+
+Model / MVC e Data Access Object (DAO) - Aula 03 / parte 2 - Componentes de Software e Reúso 2020:
+https://www.youtube.com/watch?v=nz2YwH0pHNQ
+
+Sistema de gerenciamento de bibliotecas grátis, PHP 8, MysQl, JavaScript – MVC: https://www.youtube.com/watch?v=WEoL_XzuAbU&t=339s
+
+How to connect login/signup to database using php and mysql: https://www.youtube.com/watch?v=MC--T_ULUGE&t=799s
+
+FORMULÁRIO DE LOGIN UTILIZANDO HTML CSS JAVASCRIPT PHP E BANCO DE DADOS MYSQL: https://www.youtube.com/watch?v=oB7wg4N85wo
+
+CRUD com PHP orientado a objetos, PDO e MySQL: https://www.youtube.com/watch?v=uG64BgrlX7o
+
+POO Classes #P5 Herança - Curso de Javascript - Aula 114: https://www.youtube.com/watch?v=vD5g4bHLmDo&t=194s
+
+Projeto de JavaScript para iniciantes - To Do List com JavaScript puro: https://www.youtube.com/watch?v=HSssE1PRQcA&t=1477s
+
+Pesquisando DAO: https://www.reddit.com/r/learnprogramming/comments/xu0s94/nodejs_mongodb_what_is_a_data_access_object_dao/#:~:text=A%20DAO%20is%20a%20type,so%20it%20shouldn't%20know.
+
+5 Implementando o Padrão DAO: https://www.youtube.com/watch?v=MuijxrBYs9g || https://www.youtube.com/watch?v=bdXRaY6f0IQ
+
+Utilizei também: https://chatgpt.com/?model=text-davinci-002-render-sha
+
+
+Em suma, é isso que tenho a relatar.
+
+Atenciosamente, Ana Oliveira.
+
+

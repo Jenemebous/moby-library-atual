@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Livros</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/visualizar.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Estante</h1>
+        <a href="/home-logado" class="home-link"><img src="img/moby.png" alt="moby-icon" class="logo"></a>
+    </header>
+
+    <header id="mid">
+        <div class="search">
+            <div class="input">
+                <input type="search" placeholder="Busque por livros aqui!">
+                <div class="input-group-append">
+                    <div class="input-group-text" style="background-color: #bcbcbc; margin-left: 10px;">
+                        <i class="fas fa-search" id="searchIcon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <!--- mostra a opção de livros/quais livros o user pode visualizar -->
+
+        <script>
+            document.getElementById('searchIcon').addEventListener('click', function() {
+                const searchTerm = document.querySelector('input[type="search"]').value;
+                window.location.href = '/livros?search=' + searchTerm;
+            });
+        </script>
+    </header>
+
+    <main>
+        <section class="books-section">
+            <h2 class="section-title">Meus Livros</h2>
+            <ul class="books-list">
+                <% livros.forEach(livro => { %>
+                    <li class="book-item">
+                        <strong>Título:</strong> <span class="book-title"><%= livro.titulo %></span><br>
+                        <strong>Autor:</strong> <span class="book-author"><%= livro.autor %></span><br>
+                        <strong>Data de Publicação:</strong> <span class="book-published-date"><%= livro.ano_de_publicacao %></span><br>
+                        <strong>Gênero:</strong> <span class="book-genre"><%= livro.genero %></span><br>
+                        <strong>Sinopse:</strong> <span class="book-synopsis"><%= livro.sinopse %></span><br>
+                        <strong>ID do Livro:</strong> <span class="book-id"><%= livro.id_livro %></span>
+                    </li>
+                <% }); %>
+            </ul>
+        </section>
+    </main>
+
+     <footer class="footer">
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="/adicionar">Adicionar um livro</a></li>
+                <li><a href="/remover">Remover um livro</a></li>
+                <li><a href="/editar">Editar um livro</a></li>
+            </ul>
+        </nav>
+    </footer>
+    
+</body>
+</html>

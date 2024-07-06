@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remover Livro - Estante</title>
+    <link rel="stylesheet" href="/css/remover.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Estante</h1>
+        <a href="/home-logado" class="home-link"><img src="img/moby.png" alt="moby-icon" class="logo"></a>
+    </header>
+    
+    <main>
+        <section class="remove-book">
+            <h2>Remover Livro</h2>
+            <% if (typeof mensagem !== 'undefined') { %>
+                <p class="<%= tipo === 'sucesso' ? 'success-message' : 'error-message' %>"><%= mensagem %></p>
+            <% } %>
+            <form id="removerLivroForm" action="/removerLivros" method="post" class="form">
+                <div class="form-group">
+                    <label for="id">ID do Livro:</label>
+                    <select id="id" name="id_livro">
+                    </select>
+                </div>
+                <button type="submit">Remover Livro</button>
+            </form>
+            <p id="mensagem"></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="/adicionar">Adicionar um livro</a></li>
+                <li><a href="/editar">Editar um livro</a></li>
+                <li><a href="/visualizar">Visualizar seus livros</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    
+    <!--- mostra a opção de livros/quais livros o user pode remover -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/livrosDoUsuario')
+                .then(response => response.json())
+                .then(livros => {
+                    const select = document.getElementById('id');
+                    livros.forEach(livro => {
+                        const option = document.createElement('option');
+                        option.value = livro.id_livro;
+                        option.textContent = `${livro.id_livro} - ${livro.titulo}`;
+                        select.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar livros do usuário:', error);
+                });
+        });
+    </script>
+</body>
+</html>

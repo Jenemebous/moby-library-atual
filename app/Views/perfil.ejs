@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Moby</title>
+    <link rel="stylesheet" href="/css/perfil.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Perfil</h1>
+    </header>
+
+    <main>
+        <section class="user-info">
+            <h2>Olá, <%= nom_usuario %>!</h2>
+            <h2>Estes são alguns de seus livros</h2>
+            <% if (livros.length > 0) { %>
+                <div class="books-section">
+                    <ul class="book-list-container">
+                        <% livros.forEach(livro => { %>
+                            <li class="book-item">
+                                <h3><%= livro.titulo %></h3>
+                                <p><strong>Autor:</strong> <%= livro.autor %></p>
+                                <p><strong>Gênero:</strong> <%= livro.genero %></p>
+                                <p><strong>Ano de Publicação:</strong> <%= livro.ano_de_publicacao %></p>
+                                <p><strong>Sinopse:</strong> <%= livro.sinopse %></p>
+                            </li>
+                        <% }); %>
+                    </ul>
+                </div>
+            <% } else { %>
+                <p>Você ainda não tem livros adicionados. Adicione um agora!</p>
+            <% } %>
+         
+            <div class="add">
+                <a href="/adicionar" class="add-book-link">Adicionar Livro</a>
+            </div>
+            
+        </section>
+       
+    </main>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="/home-logado">Página Inicial</a></li>
+                <li><a href="/logout">Sair</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
