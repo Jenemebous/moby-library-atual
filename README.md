@@ -1,7 +1,12 @@
 # moby-library
 
 instale: npm install bcrypt body-parser cookie-parser ejs express express-ejs-layouts express-session method-override  mysql mysql2 prompt-sync nodemon --save OU npm i
-para rodar o servidor após o npm i, utilize: npm run dev
+
+//
+
+Para rodar o servidor após o npm i, utilize: npm run dev
+
+//
 
 banco de dados: CREATE SCHEMA IF NOT EXISTS moby; CREATE TABLE IF NOT EXISTS users ( id_usuario INT AUTO_INCREMENT PRIMARY KEY, nom_usuario VARCHAR(20), senha VARCHAR(100) );
 
